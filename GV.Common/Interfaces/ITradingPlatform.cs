@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GV.Common.Models;
 
 namespace GV.Common.Interfaces
 {
     public interface ITradingPlatform
     {
+        bool BindManager(BindManagerRequest manager);
     }
 }
