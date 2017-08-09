@@ -1,7 +1,6 @@
-﻿using GV.Gateway.Console.Models.Enums;
-using System;
+﻿using System;
 
-namespace GV.Gateway.Console.Models
+namespace GV.Gateway.Common
 {
     public class Order
     {

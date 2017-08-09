@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GV.Gateway.Common.Interfaces;
+using System;
 
 namespace GV.Gateway.EthMediator
 {
-    interface IEthMediator
+    public interface IEthMediator
     {
+        event Action<IManager> NewManager;
     }
 }

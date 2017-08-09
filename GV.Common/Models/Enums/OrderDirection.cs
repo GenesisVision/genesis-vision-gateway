@@ -1,4 +1,4 @@
-﻿namespace GV.Gateway.Console.Models.Enums
+﻿namespace GV.Gateway.Common
 {
     public enum OrderDirection
     {

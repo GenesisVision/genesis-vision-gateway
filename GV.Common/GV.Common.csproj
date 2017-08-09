@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C8E22ABD-43EA-4D6F-A536-07A691FC71A6}</ProjectGuid>
+    <ProjectGuid>{795B9F7C-DE13-47E7-B054-F4208F187D6F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GV.Gateway.EthMediator</RootNamespace>
-    <AssemblyName>GV.Gateway.EthMediator</AssemblyName>
+    <RootNamespace>GV.Common</RootNamespace>
+    <AssemblyName>GV.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,14 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IEthMediator.cs" />
+    <Compile Include="Interfaces\IBroker.cs" />
+    <Compile Include="Interfaces\IManager.cs" />
+    <Compile Include="Interfaces\ITradingPlatform.cs" />
+    <Compile Include="Models\Enums\OrderDirection.cs" />
+    <Compile Include="Models\Enums\TradingPeriod.cs" />
+    <Compile Include="Models\ManagerSettings.cs" />
+    <Compile Include="Models\NewInvestment.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GV.Common\GV.Common.csproj">
-      <Project>{795B9F7C-DE13-47E7-B054-F4208F187D6F}</Project>
-      <Name>GV.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

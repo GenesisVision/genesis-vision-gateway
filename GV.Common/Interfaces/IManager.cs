@@ -1,7 +1,6 @@
-﻿using GV.Gateway.Common;
-using System;
+﻿using System;
 
-namespace GV.Gateway.Console.Interfaces
+namespace GV.Gateway.Common.Interfaces
 {
     public interface IManager
     {
