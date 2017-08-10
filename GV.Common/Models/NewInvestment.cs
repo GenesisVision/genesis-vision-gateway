@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace GV.Gateway.Common
+namespace GV.Common.Models
 {
     public class NewInvestment
     {

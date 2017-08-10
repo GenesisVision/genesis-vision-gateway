@@ -1,6 +1,10 @@
-﻿namespace GV.Common.Interfaces
+﻿using GV.Common.Models;
+using GV.Gateway.Common;
+
+namespace GV.Common.Interfaces
 {
-    interface IIpfsConnector
+    public interface IIpfsConnector
     {
+        void WriteOrder(Manager manager, Order order);
     }
 }

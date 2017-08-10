@@ -1,4 +1,6 @@
-﻿namespace GV.Gateway.Common
+﻿using GV.Common.Models.Enums;
+
+namespace GV.Common.Models
 {
     public class ManagerSettings
     {

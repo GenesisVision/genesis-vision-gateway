@@ -43,11 +43,12 @@
   <ItemGroup>
     <Compile Include="Interfaces\IBroker.cs" />
     <Compile Include="Interfaces\IEthAdapter.cs" />
-    <Compile Include="Interfaces\IManager.cs" />
+    <Compile Include="Interfaces\IIpfsConnector.cs" />
     <Compile Include="Interfaces\ITradingPlatform.cs" />
     <Compile Include="Models\BindManagerRequest.cs" />
     <Compile Include="Models\Enums\OrderDirection.cs" />
     <Compile Include="Models\Enums\TradingPeriod.cs" />
+    <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerSettings.cs" />
     <Compile Include="Models\NewInvestment.cs" />
     <Compile Include="Models\Order.cs" />
