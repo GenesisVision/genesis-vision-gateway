@@ -1,8 +1,7 @@
 ﻿using GV.Common.Models;
-using GV.Gateway.Common;
 using System;
 
-namespace GV.Gateway.Console.Interfaces
+namespace GV.Common.Interfaces
 {
     public interface IManager
     {

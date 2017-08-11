@@ -1,5 +1,4 @@
-﻿using System;
-using GV.Common.Interfaces;
+﻿using GV.Common.Interfaces;
 using GV.Common.Models;
 
 namespace GV.Gateway.IpfsConnector
