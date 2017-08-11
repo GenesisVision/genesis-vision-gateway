@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Interfaces\IBroker.cs" />
     <Compile Include="Interfaces\IEthAdapter.cs" />
+    <Compile Include="Interfaces\IGVExchanger.cs" />
     <Compile Include="Interfaces\IIpfsConnector.cs" />
     <Compile Include="Interfaces\ITradingPlatform.cs" />
     <Compile Include="Models\BindManagerRequest.cs" />
