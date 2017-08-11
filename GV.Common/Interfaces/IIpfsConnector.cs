@@ -1,5 +1,4 @@
 ﻿using GV.Common.Models;
-using GV.Gateway.Common;
 
 namespace GV.Common.Interfaces
 {

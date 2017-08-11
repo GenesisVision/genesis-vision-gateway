@@ -16,5 +16,11 @@ namespace GV.Common.Interfaces
         /// </summary>
         /// <param name="managers"></param>
         void SubscribeOnManagers(IEnumerable<string> managers);
+
+        /// <summary>
+        /// Manager was deactivated in Genesis Vision
+        /// </summary>
+        /// <param name=""></param>
+        void DeactivateManager(string manager);
     }
 }

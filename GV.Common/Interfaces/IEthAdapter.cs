@@ -7,6 +7,7 @@ namespace GV.Common.Interfaces
     public interface IEthAdapter
     {
         event Action<BindManagerRequest> BindManager;
+        event Action<string> DeactivateManager;
 
         IEnumerable<string> GetManagers();
     }

@@ -6,27 +6,36 @@ namespace GV.Gateway
 {
     public class GatewayService
     {
-        private IEthAdapter ethAdaptor;
+        private IEthAdapter ethAdapter;
         private ITradingPlatform tradingPlatform;
 
-        public GatewayService(IEthAdapter ethAdaptor, ITradingPlatform tradingPlatform)
+        public GatewayService(IEthAdapter ethAdapter, ITradingPlatform tradingPlatform)
         {
-            this.ethAdaptor = ethAdaptor;
+            this.ethAdapter = ethAdapter;
             this.tradingPlatform = tradingPlatform;
         }
 
         public void Start()
         {
-            var managers = ethAdaptor.GetManagers();
+            var managers = ethAdapter.GetManagers();
             tradingPlatform.SubscribeOnManagers(managers);
 
-            ethAdaptor.BindManager += BindManager;
+            ethAdapter.BindManager += BindManager;
+            ethAdapter.DeactivateManager += DeactivateManager;
         }
 
+        
         public void Stop()
         {
-            ethAdaptor.BindManager -= BindManager;
+            ethAdapter.DeactivateManager -= DeactivateManager;
+            ethAdapter.BindManager -= BindManager;
         }
+
+        private void DeactivateManager(string manager)
+        {
+            tradingPlatform.DeactivateManager(manager);
+        }
+
 
         private void BindManager(BindManagerRequest manager)
         {

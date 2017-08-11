@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GV.Common", "GV.Common\GV.Common.csproj", "{D085B64B-904A-4348-8651-249F2D7A626C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GV.Common", "GV.Common\GV.Common.csproj", "{D085B64B-904A-4348-8651-249F2D7A626C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GV.Gateway", "GV.Gateway\GV.Gateway.csproj", "{49C3DA9B-FABC-4145-8106-EAFCD3B529D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GV.Gateway", "GV.Gateway\GV.Gateway.csproj", "{49C3DA9B-FABC-4145-8106-EAFCD3B529D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GV.Gateway.IpfsConnector", "GV.Gateway.IpfsConnector\GV.Gateway.IpfsConnector.csproj", "{D9C855D4-8A17-4944-98A2-386E6AC6C04B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GV.Gateway.IpfsConnector", "GV.Gateway.IpfsConnector\GV.Gateway.IpfsConnector.csproj", "{D9C855D4-8A17-4944-98A2-386E6AC6C04B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GV.Gateway.Tests", "GV.Gateway.Tests\GV.Gateway.Tests.csproj", "{F587F916-6799-4A89-892D-692ADE6C11D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D9C855D4-8A17-4944-98A2-386E6AC6C04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C855D4-8A17-4944-98A2-386E6AC6C04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9C855D4-8A17-4944-98A2-386E6AC6C04B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F587F916-6799-4A89-892D-692ADE6C11D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F587F916-6799-4A89-892D-692ADE6C11D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F587F916-6799-4A89-892D-692ADE6C11D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F587F916-6799-4A89-892D-692ADE6C11D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
