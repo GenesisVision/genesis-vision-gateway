@@ -3,6 +3,7 @@ using GV.Common.Interfaces;
 using System.Linq;
 using System.Threading;
 using System;
+using NLog;
 
 namespace GV.Gateway
 {
@@ -13,9 +14,12 @@ namespace GV.Gateway
         private ITradingPlatform tradingPlatform;
 
         private Timer timer;
+        private ILogger logger;
 
-        public GatewayService(IEthAdapter ethAdapter, ITradingPlatform tradingPlatform)
+        public GatewayService(IEthAdapter ethAdapter, ITradingPlatform tradingPlatform, 
+            NLog.ILogger logger)
         {
+            this.logger = logger;
             this.ethAdapter = ethAdapter;
             this.tradingPlatform = tradingPlatform;
         }
@@ -23,6 +27,7 @@ namespace GV.Gateway
 
         public void Start()
         {
+            logger.Info("Genesis Vision Gateway starting...");
             var managers = ethAdapter.GetManagers();
             tradingPlatform.SubscribeOnManagers(managers);
 
@@ -30,14 +35,18 @@ namespace GV.Gateway
             ethAdapter.DeactivateManager += DeactivateManager;
 
             timer = new Timer(OnTimer, null, TimerPeriod, TimerPeriod);
+            logger.Info("Genesis Vision Gateway started");
         }
 
 
         public void Stop()
         {
+            logger.Info("Genesis Vision Gateway stopping...");
+
             timer.Dispose();
             ethAdapter.DeactivateManager -= DeactivateManager;
             ethAdapter.BindManager -= BindManager;
+            logger.Info("Genesis Vision Gateway stopped");
         }
 
         private void DeactivateManager(string manager)
@@ -60,7 +69,7 @@ namespace GV.Gateway
 
         private void OnTimer(object state)
         {
-            Console.WriteLine("Test");
+            logger.Debug("Gateway scheduler on timer");
         }
     }
 }
