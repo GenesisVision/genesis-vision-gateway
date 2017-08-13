@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GV.Gateway", "GV.Gateway\GV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GV.Gateway.IpfsConnector", "GV.Gateway.IpfsConnector\GV.Gateway.IpfsConnector.csproj", "{D9C855D4-8A17-4944-98A2-386E6AC6C04B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GV.Gateway.Tests", "GV.Gateway.Tests\GV.Gateway.Tests.csproj", "{F587F916-6799-4A89-892D-692ADE6C11D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GV.Gateway.Tests", "GV.Gateway.Tests\GV.Gateway.Tests.csproj", "{F587F916-6799-4A89-892D-692ADE6C11D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GV.Gateway.Console", "GV.Gateway.Console\GV.Gateway.Console.csproj", "{CEF6F945-98DB-4576-91DD-F0BD4AAD261D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F587F916-6799-4A89-892D-692ADE6C11D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F587F916-6799-4A89-892D-692ADE6C11D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F587F916-6799-4A89-892D-692ADE6C11D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF6F945-98DB-4576-91DD-F0BD4AAD261D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF6F945-98DB-4576-91DD-F0BD4AAD261D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF6F945-98DB-4576-91DD-F0BD4AAD261D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF6F945-98DB-4576-91DD-F0BD4AAD261D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

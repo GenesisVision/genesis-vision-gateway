@@ -9,6 +9,8 @@ namespace GV.Common.Interfaces
         event Action<BindManagerRequest> BindManager;
         event Action<string> DeactivateManager;
 
+        DateTime Now { get; }
+
         IEnumerable<string> GetManagers();
     }
 }
