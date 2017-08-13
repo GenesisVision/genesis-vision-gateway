@@ -11,6 +11,9 @@ namespace GV.Common.Interfaces
 
         DateTime Now { get; }
 
-        IEnumerable<string> GetManagers();
+        IEnumerable<Manager> GetManagers();
+
+        ClearingData GetClearingData(string manager);
+        void MakeClearing(string manager);
     }
 }

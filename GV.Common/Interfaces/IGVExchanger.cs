@@ -1,7 +1,7 @@
 ﻿namespace GV.Common.Interfaces
 {
-    interface IGVExchanger
+    public interface IGVExchanger
     {
-        void Exchange(string from, string to);
+        decimal Exchange(string from, string to);
     }
 }

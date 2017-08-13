@@ -2,6 +2,7 @@ using GV.Common.Interfaces;
 using System;
 using Xunit;
 using NSubstitute;
+using NLog;
 
 namespace GV.Gateway.Tests
 {
@@ -9,13 +10,17 @@ namespace GV.Gateway.Tests
     {
         private IEthAdapter ethAdapter;
         private ITradingPlatform tradingPlatform;
+        private IGVExchanger exchanger;
         private GatewayService gateway;
+        private ILogger logger;
 
         public GatewayServiceTests()
         {
             ethAdapter = Substitute.For<IEthAdapter>();
             tradingPlatform = Substitute.For<ITradingPlatform>();
-            gateway = new GatewayService(ethAdapter, tradingPlatform);
+            exchanger = Substitute.For<IGVExchanger>();
+            logger = Substitute.For<ILogger>();
+            gateway = new GatewayService(ethAdapter, tradingPlatform, exchanger, logger);
             gateway.Start();
         }
 

@@ -17,8 +17,9 @@
 
             var ethAdapter = Substitute.For<IEthAdapter>();
             var tradingPlatform = Substitute.For<ITradingPlatform>();
+            var exchanger = Substitute.For<IGVExchanger>();
 
-            var gateway = new GatewayService(ethAdapter, tradingPlatform, logger);
+            var gateway = new GatewayService(ethAdapter, tradingPlatform, exchanger, logger);
             gateway.Start();
 
             Console.ReadLine();
